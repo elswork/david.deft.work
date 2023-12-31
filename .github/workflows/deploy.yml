@@ -3,7 +3,7 @@ name: Deploy Astro Site to GitHub Pages
 on:
   push:
     branches:
-      - main  # Asegúrate de usar la rama correcta
+      - master  # Asegúrate de usar la rama correcta
 
 jobs:
   build-and-deploy:
