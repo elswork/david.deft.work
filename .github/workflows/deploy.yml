@@ -1,0 +1,29 @@
+name: Deploy Astro Site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Asegúrate de usar la rama correcta
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14' # Especifica la versión de Node.js
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build Site
+      run: npm run build
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages  # La rama de GitHub Pages
+        folder: dist      # Asegúrate de que esta carpeta coincida con la carpeta de salida de tu proyecto Astro
