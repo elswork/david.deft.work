@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import { Icon } from 'astro-icon/components';
 ---
 
 <Layout title="Bienvenidos a mi página">
@@ -49,7 +50,7 @@ import Card from '../components/Card.astro';
 				title="Integrations"
 				body="Supercharge your project with new frameworks and libraries."
 				/> -->
-				<Card
+			<Card
 				href="https://youtube.com/@GatoMineroDavid"
 				title="Youtube"
 				body="Disfruta de mis videos. 📹"
@@ -59,6 +60,7 @@ import Card from '../components/Card.astro';
 				title="GitHub"
 				body="Edita esta página online. ❤️"
 			/>
+			<Icon name="github" />
 		</ul>
 	</main>	  
 </Layout>
