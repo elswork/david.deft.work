@@ -18,10 +18,13 @@ const { title } = Astro.props;
 		<!-- Google tag (gtag.js) -->
 		<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-EH3KG622WX"></script>
 		<script>
+		// @ts-ignore
 		window.dataLayer = window.dataLayer || [];
+		// @ts-ignore
 		function gtag(){dataLayer.push(arguments);}
+		// @ts-ignore
 		gtag('js', new Date());
-
+		// @ts-ignore
 		gtag('config', 'G-EH3KG622WX');
 		</script>
 	</head>
