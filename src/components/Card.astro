@@ -14,8 +14,8 @@ const { href, title, body } = Astro.props;
 			{title}
 			<span>&rarr;</span>
 		</h2>
-		<p>
-			{body}
+		<p innerHTML={body}> {/* Renderiza el HTML o componente */}
+			{/* El contenido de body será insertado aquí */}
 		</p>
 	</a>
 </li>
